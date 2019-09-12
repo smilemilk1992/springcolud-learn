@@ -1,19 +1,41 @@
 package com.springcolud.producer1.controller;
 
+import com.alibaba.fastjson.JSON;
+import com.springcolud.producer1.Mapper.PoidTimeMapper;
+import com.springcolud.producer1.Model.PoidTime;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * @author haochen
  * @date 2019/9/11 16:17
  */
 @RestController
-@EnableDiscoveryClient
+//@EnableDiscoveryClient
 public class HelloController {
+
+    @Autowired
+    private PoidTimeMapper poidTimeMapper;
+
     @RequestMapping("/hello1/{name}")
-    public String index(@RequestParam(value = "name") String name) {
+    public String index(@PathVariable("name") String name) {
         return "hello1  ，" +name;
+    }
+
+    @RequestMapping(value = "/getInfo1")
+    public String oidGetNidList1(HttpServletRequest request){
+        String id = request.getParameter("id");
+        PoidTime poidTime=poidTimeMapper.selectByPrimaryKey(Integer.valueOf(id));
+        return JSON.toJSONString(poidTime);
+    }
+
+    @RequestMapping(value = "/getInfo")
+    public String oidGetNidList(@RequestParam(value = "id") String id){
+        PoidTime poidTime=poidTimeMapper.selectByPrimaryKey(Integer.valueOf(id));
+        return JSON.toJSONString(poidTime);
     }
 }

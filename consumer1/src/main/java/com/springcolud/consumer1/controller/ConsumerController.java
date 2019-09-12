@@ -3,9 +3,9 @@ package com.springcolud.consumer1.controller;
 import com.springcolud.consumer1.remote.HelloRemote;
 import com.springcolud.consumer1.remote.HelloRemote1;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
 
 @RestController
 public class ConsumerController {
@@ -24,5 +24,8 @@ public class ConsumerController {
     public String index1(@PathVariable("name") String name) {
         return HelloRemote1.hello1(name);
     }
+
+    @RequestMapping(value = "/getInfo")
+    public String oidGetNidList(@RequestParam(value = "id") String id){return HelloRemote1.oidGetNidList(id);};
 
 }

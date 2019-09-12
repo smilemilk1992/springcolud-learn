@@ -2,6 +2,7 @@ package com.springcolud.consumer.remote;
 
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface HelloRemote {
 
     @RequestMapping(value = "/hello/{name}")
-    public String hello1(@RequestParam(value = "name") String name);
+    public String hello1(@PathVariable("name") String name);
 
     /**
      *  @RequestMapping("/hello")
