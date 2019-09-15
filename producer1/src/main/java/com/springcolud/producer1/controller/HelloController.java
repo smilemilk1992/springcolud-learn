@@ -1,14 +1,10 @@
 package com.springcolud.producer1.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.springcolud.producer1.Mapper.PoidTimeMapper;
-import com.springcolud.producer1.Model.PoidTime;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 /**
  * @author haochen
