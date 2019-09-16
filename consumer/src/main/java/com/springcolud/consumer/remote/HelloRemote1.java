@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * 此类中的方法和远程服务中contoller中的方法名和参数需保持一致。
  */
-@FeignClient(name = "spring-cloud-producer1")
+@FeignClient(name = "spring-cloud-producer")
 public interface HelloRemote1 {
 
     @RequestMapping(value = "/hello1/{name}")

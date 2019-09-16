@@ -7,7 +7,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-
+/**
+ *
+ Feign 采用的是基于接口的注解
+ Feign 整合了ribbon，具有负载均衡的能力
+ 整合了Hystrix，具有熔断的能力
+ */
 @FeignClient(name = "spring-cloud-producer")
 public interface HelloRemote {
 

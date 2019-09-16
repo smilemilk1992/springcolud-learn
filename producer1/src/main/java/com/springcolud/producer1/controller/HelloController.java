@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServletRequest;
  * @date 2019/9/11 16:17
  */
 @RestController
-//@EnableDiscoveryClient
 public class HelloController {
 
     @Autowired
@@ -24,16 +23,17 @@ public class HelloController {
         return "hello1  ，" +name;
     }
 
-    @RequestMapping(value = "/getInfo1")
+    @RequestMapping(value = "/getInfo")
     public String oidGetNidList1(HttpServletRequest request){
+        System.out.println("----9006-----");
         String id = request.getParameter("id");
         PoidTime poidTime=poidTimeMapper.selectByPrimaryKey(Integer.valueOf(id));
         return JSON.toJSONString(poidTime);
     }
 
-    @RequestMapping(value = "/getInfo")
-    public String oidGetNidList(@RequestParam(value = "id") String id){
-        PoidTime poidTime=poidTimeMapper.selectByPrimaryKey(Integer.valueOf(id));
-        return JSON.toJSONString(poidTime);
-    }
+//    @RequestMapping(value = "/getInfo")
+//    public String oidGetNidList(@RequestParam(value = "id") String id){
+//        PoidTime poidTime=poidTimeMapper.selectByPrimaryKey(Integer.valueOf(id));
+//        return JSON.toJSONString(poidTime);
+//    }
 }
