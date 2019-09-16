@@ -1,5 +1,6 @@
 package com.springcolud.consumer.remote;
 
+import com.springcolud.consumer.Hystric.SchedualServiceHiHystric;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,9 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * 此类中的方法和远程服务中contoller中的方法名和参数需保持一致。
+ * 此类中的方法和远程服务中contoller中的方法名和参数需保持一致。加了熔断器
  */
-@FeignClient(name = "spring-cloud-producer")
+@FeignClient(name = "spring-cloud-producer",fallback = SchedualServiceHiHystric.class)
 public interface HelloRemote1 {
 
     @RequestMapping(value = "/hello1/{name}")

@@ -5,6 +5,7 @@ import com.springcolud.consumer.remote.HelloRemote1;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 @RestController
@@ -13,7 +14,7 @@ public class ConsumerController {
     @Autowired
     HelloRemote HelloRemote;
 
-    @Autowired
+    @Resource
     HelloRemote1 HelloRemote1;
     @RequestMapping("/hello/{name}")
     public String index(@PathVariable("name") String name) {
