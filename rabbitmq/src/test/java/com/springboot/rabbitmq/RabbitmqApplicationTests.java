@@ -1,5 +1,6 @@
 package com.springboot.rabbitmq;
 
+import com.springboot.rabbitmq.mqTest.MsgSender;
 import com.springboot.rabbitmq.mqTest.Sender;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,6 +13,10 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class RabbitmqApplicationTests {
     @Autowired
     private Sender sender;
+
+    @Autowired
+    private MsgSender msgSender;
+
     @Test
     public void contextLoads() {
     }
@@ -19,10 +24,21 @@ public class RabbitmqApplicationTests {
     public void queueTest() throws InterruptedException {
 
         while (true){
-            Thread.sleep(1000);
+            Thread.sleep(100);
             sender.send("你好");
         }
     }
+
+    @Test
+    public void send1() throws Exception {
+        msgSender.send1();
+    }
+
+    @Test
+    public void send2() throws Exception {
+        msgSender.send2();
+    }
+
 
 
 }

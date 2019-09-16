@@ -9,10 +9,10 @@ import org.springframework.stereotype.Component;
  * @date 2019/9/16 17:38
  */
 @Component
-public class Receiver {
+public class Receiver1 {
     //    创建消息监听器
     @RabbitListener(queues="hello")
     public void process(String msg){
-        System.out.println("--0-"+msg);
+        System.out.println("--1-"+msg);
     }
 }
