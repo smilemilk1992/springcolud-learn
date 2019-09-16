@@ -11,11 +11,11 @@ import org.springframework.stereotype.Component;
 public class SchedualServiceHiHystric implements HelloRemote1 {
     @Override
     public String hello1(String name) {
-        return "【hello1】sorry "+name;
+        return "【hello1】sorry " + name;
     }
 
     @Override
     public String oidGetNidList(String id) {
-        return "【oidGetNidList】sorry "+id;
+        return "【oidGetNidList】sorry " + id;
     }
 }

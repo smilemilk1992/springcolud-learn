@@ -16,6 +16,7 @@ public class ConsumerController {
 
     @Resource
     HelloRemote1 HelloRemote1;
+
     @RequestMapping("/hello/{name}")
     public String index(@PathVariable("name") String name) {
         return HelloRemote.hello1(name);
@@ -27,5 +28,9 @@ public class ConsumerController {
     }
 
     @RequestMapping(value = "/getInfo")
-    public String oidGetNidList(@RequestParam(value = "id") String id){return HelloRemote1.oidGetNidList(id);};
+    public String oidGetNidList(@RequestParam(value = "id") String id) {
+        return HelloRemote1.oidGetNidList(id);
+    }
+
+    ;
 }
