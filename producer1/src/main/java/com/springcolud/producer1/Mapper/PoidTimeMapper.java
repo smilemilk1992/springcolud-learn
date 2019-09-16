@@ -1,5 +1,7 @@
 package com.springcolud.producer1.Mapper;
 
+import com.springcolud.producer1.Model.PoidTime;
+import com.springcolud.producer1.Model.PoidTimeExample;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
