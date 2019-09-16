@@ -1,6 +1,6 @@
 package com.springcolud.consumer.Hystric;
 
-import com.springcolud.consumer.remote.HelloRemote1;
+import com.springcolud.consumer.remote.HelloRemote123;
 import org.springframework.stereotype.Component;
 
 /**
@@ -8,7 +8,12 @@ import org.springframework.stereotype.Component;
  * @date 2019/9/16 14:32
  */
 @Component
-public class SchedualServiceHiHystric implements HelloRemote1 {
+public class SchedualServiceHiHystric implements HelloRemote123 {
+    @Override
+    public String hello(String name) {
+        return "【hello1】sorry " + name;
+    }
+
     @Override
     public String hello1(String name) {
         return "【hello1】sorry " + name;
