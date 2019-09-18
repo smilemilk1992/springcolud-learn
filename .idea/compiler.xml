@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <option name="DEFAULT_COMPILER" value="Eclipse" />
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -13,13 +14,12 @@
         <module name="producer1" />
         <module name="rabbitmq" />
         <module name="server-feign" />
+        <module name="server-gateway" />
         <module name="server-ribbon" />
         <module name="server-zuul" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="consumer" target="1.8" />
-      <module name="consumer1" target="1.8" />
       <module name="eureka" target="1.8" />
       <module name="eureka1" target="1.8" />
       <module name="eureka2" target="1.8" />
@@ -27,6 +27,7 @@
       <module name="producer1" target="1.8" />
       <module name="rabbitmq" target="1.8" />
       <module name="server-feign" target="1.8" />
+      <module name="server-gateway" target="1.8" />
       <module name="server-ribbon" target="1.8" />
       <module name="server-zuul" target="1.8" />
     </bytecodeTargetLevel>

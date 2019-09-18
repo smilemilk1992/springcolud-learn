@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/producer1/producer1.iml" filepath="$PROJECT_DIR$/producer1/producer1.iml" />
       <module fileurl="file://$PROJECT_DIR$/rabbitmq/rabbitmq.iml" filepath="$PROJECT_DIR$/rabbitmq/rabbitmq.iml" />
       <module fileurl="file://$PROJECT_DIR$/server-feign/server-feign.iml" filepath="$PROJECT_DIR$/server-feign/server-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server-gateway/server-gateway.iml" filepath="$PROJECT_DIR$/server-gateway/server-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/server-ribbon/server-ribbon.iml" filepath="$PROJECT_DIR$/server-ribbon/server-ribbon.iml" />
       <module fileurl="file://$PROJECT_DIR$/server-zuul/server-zuul.iml" filepath="$PROJECT_DIR$/server-zuul/server-zuul.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcolud-learn.iml" filepath="$PROJECT_DIR$/springcolud-learn.iml" />
